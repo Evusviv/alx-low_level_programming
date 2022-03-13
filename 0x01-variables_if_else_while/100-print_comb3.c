@@ -1,31 +1,36 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
- * main - main block
- * Description: print all possible different combination of two digits
- * Return: 0
- */
+* main - print all combos of 2 digits using putchar
+* without repeating any combos
+*
+* Return: 0
+*/
 int main(void)
 {
-int c;
-int d = 0;
-while (d < 10)
+int i = '0';
+int j = '0';
+while (i <= '9')
 {
-c = 0;
-}
-while (c < 10)
+while (j <= '9')
 {
-if (d != c && d < c)
-putchar('0' + d);
-putchar('0' + c);
-}
-if (c + d != 17)
+if (!(i > j || i == j))
 {
-putchar(',');
-putchar(' ');
+putchar(i);
+putchar(j);
+if (i == '8' && j == '9')
+{
+putchar ('\n');
 }
-c++;
-d++;
-putchar('\n');
+else
+{
+putchar (',');
+putchar (' ');
+}
+}
+j++;
+}
+j = '0';
+i++;
+}
 return (0);
 }
