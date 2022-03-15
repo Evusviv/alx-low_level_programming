@@ -1,19 +1,15 @@
-#include "holberton.h"
+#include <stdio.h>
 /**
-* main -  prints Holberton, followed by a new line
+* main -  prints _putchar, followed by a new line
 * Return: Always 0 (Success)
 */
 int main(void)
 {
-_putchar('H');
-_putchar('o');
-_putchar('l');
-_putchar('b');
-_putchar('e');
-_putchar('r');
-_putchar('t');
-_putchar('o');
-_putchar('n');
-_putchar('\n');
+int str[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
+int i, size;
+size = sizeof(str) / sizeof(int);
+for (i = 0; i < size; i++)
+putchar(str[i]);
+putchar('\n');
 return (0);
 }
