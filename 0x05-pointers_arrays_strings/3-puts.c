@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* 3-puts.c - prints a string to stdout
+* _puts - prints a string to stdout
 * @str: pointer to the string to print
 */
 void _puts(char *str)
@@ -13,7 +13,7 @@ if (str[i] == '\0')
 putchar('\n');
 break;
 }
-_putchar(str[i]);
+putchar(str[i]);
 i++;
 }
 }
